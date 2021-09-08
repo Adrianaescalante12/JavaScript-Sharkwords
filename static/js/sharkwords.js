@@ -18,7 +18,8 @@ let numWrong = 0;
 // Loop over the chars in `word` and create divs.
 //
 const createDivsForChars = (word) => {
-  // Replace this with your code
+  for (const letter of word) {
+    document.querySelector("#word-container").insertAdjacentHTML('beforeend', `<div class= "letter-box ${letter}"></div>`);}
 };
 
 // Loop over each letter in the alphabet and generate a button
@@ -53,7 +54,7 @@ const isLetterInWord = (letter) => {
   // finish this lab but we hard code it so we know what the word is
   // and can tell if things look correct for this word
   const word = 'hello';
-
+  createDivsForChars(hello)
   // call the function that makes an empty line for each letter in the word
   // Replace this line with the function call
 
